@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;org.generation.lucasbentes.helloWorld.bsm.java&apos; to &apos;BSM.java&apos;&#x0D;&#x0A;- Original project: &apos;helloWorld&apos;&#x0D;&#x0A;- Original element: &apos;org.generation.lucasbentes.helloWorld.bsm.java&apos;&#x0D;&#x0A;- Renamed element: &apos;org.generation.lucasbentes.helloWorld.BSM.java&apos;" description="Rename compilation unit &apos;bsm.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;org.generation.lucasbentes.helloWorld{bsm.java" name="BSM.java" references="false" stamp="1648046696243" version="1.0"/>
+</session>

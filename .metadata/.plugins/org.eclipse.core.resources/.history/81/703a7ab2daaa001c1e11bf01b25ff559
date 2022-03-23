@@ -1,0 +1,11 @@
+package org.generation.lucasbentes.helloWorld;
+
+public class Lista {
+	
+	public void  objetivos() {
+		System.out.println("\n##### Lista de Objetivos #####"+
+					"");
+		
+	}
+
+}
