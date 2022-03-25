@@ -24,7 +24,7 @@ public class Postagem {
 	
 	@Id  // Indica que e a chave primaria
 	@GeneratedValue(strategy = GenerationType.IDENTITY)  //Vai fazer o autoencremento do abributo id
-	private Long id;
+	private long id;
 
 	@NotNull  // Informa que nao aceita informacao nula
 	private String titulo;
@@ -39,7 +39,7 @@ public class Postagem {
 	
 	// Os metodos, get's set's
 	
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
