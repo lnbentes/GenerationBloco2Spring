@@ -6,11 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.UpdateTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /*A pasta model fica as Tabelas do nosso banco de dados*/
 
@@ -24,7 +27,7 @@ public class Postagem {
 	
 	@Id  // Indica que e a chave primaria
 	@GeneratedValue(strategy = GenerationType.IDENTITY)  //Vai fazer o autoencremento do abributo id
-	private long id;
+	private Long id;
 
 	@NotNull  // Informa que nao aceita informacao nula
 	private String titulo;
@@ -35,6 +38,10 @@ public class Postagem {
 	
 	@UpdateTimestamp  // Vai marcar a postagem com a data e a hora
 	private LocalDateTime date;
+	
+	@ManyToOne  // Ele faz a comunicacao com a chave estrangeira. Informa que esse e de muitos para um
+	@JsonIgnoreProperties("postagem")  //Faz com que pare de apresentar infromacoes json apartir de um determinado atributo
+	private Tema tema;
 
 	
 	// Os metodos, get's set's
@@ -69,6 +76,14 @@ public class Postagem {
 
 	public void setDate(LocalDateTime date) {
 		this.date = date;
+	}
+
+	public Tema getTema() {
+		return tema;
+	}
+
+	public void setTema(Tema tema) {
+		this.tema = tema;
 	}
 	
 	

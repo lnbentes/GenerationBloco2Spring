@@ -38,7 +38,7 @@ public class PostagemController {
 	}
 	
 	@GetMapping("/{id}")  //Informa que esse mefoto faz uma busca por id
-	public ResponseEntity<Postagem> getById(@PathVariable long id){ //O path informa que a variavel que vai entra no metodo e uma mariavel do cominho da url(uri)
+	public ResponseEntity<Postagem> getById(@PathVariable Long id){ //O path informa que a variavel que vai entra no metodo e uma mariavel do cominho da url(uri)
 		
 		return repository.findById(id)
 				.map(resp -> ResponseEntity.ok(resp))
@@ -67,7 +67,7 @@ public class PostagemController {
 	}
 	
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable long id) {
+	public void delete(@PathVariable Long id) {
 		
 		repository.deleteById(id);
 		
